@@ -5,6 +5,7 @@ import {
   updateBlog,
   getByIdBlog,
   deleteBlog,
+  getUserById,
 } from "../controller/blogController";
 
 export const blogRouter = express.Router();
@@ -14,3 +15,4 @@ blogRouter.post("/createBlog", createBlog);
 blogRouter.put("/updateBlog/:id", updateBlog);
 blogRouter.post("/getById", getByIdBlog);
 blogRouter.delete("/:id", deleteBlog);
+blogRouter.get('/user/:id',getUserById)
